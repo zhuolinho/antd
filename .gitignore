@@ -25,7 +25,8 @@ package-lock.json
 # visual studio code
 .history
 *.log
-functions/*
+
+functions/mock
 .temp/**
 
 # umi
