@@ -10,12 +10,24 @@ export default [
       { path: '/user/register-result', component: './User/RegisterResult' },
     ],
   },
+  {
+    path: '/result',
+    Routes: ['src/pages/Authorized'],
+    authority: ['admin', 'user'],
+    routes: [
+      { path: '/result', redirect: '/result/success' },
+      {
+        path: '/result/success',
+        name: 'success',
+        component: './Result/Success',
+      },
+      { path: '/result/fail', name: 'fail', component: './Result/Error' },
+    ],
+  },
   // app
   {
     path: '/',
     component: '../layouts/BasicLayout',
-    Routes: ['src/pages/Authorized'],
-    authority: ['admin', 'user'],
     routes: [
       // dashboard
       { path: '/', redirect: '/dashboard/analysis' },
@@ -153,20 +165,6 @@ export default [
             authority: ['admin'],
             component: './Profile/AdvancedProfile',
           },
-        ],
-      },
-      {
-        name: 'result',
-        icon: 'check-circle-o',
-        path: '/result',
-        routes: [
-          // result
-          {
-            path: '/result/success',
-            name: 'success',
-            component: './Result/Success',
-          },
-          { path: '/result/fail', name: 'fail', component: './Result/Error' },
         ],
       },
       {
