@@ -30,28 +30,11 @@ export default [
     component: '../layouts/BasicLayout',
     routes: [
       // dashboard
-      { path: '/', redirect: '/dashboard/analysis' },
+      { path: '/', redirect: '/home' },
       {
-        path: '/dashboard',
-        name: 'dashboard',
-        icon: 'dashboard',
-        routes: [
-          {
-            path: '/dashboard/analysis',
-            name: 'analysis',
-            component: './Dashboard/Analysis',
-          },
-          {
-            path: '/dashboard/monitor',
-            name: 'monitor',
-            component: './Dashboard/Monitor',
-          },
-          {
-            path: '/dashboard/workplace',
-            name: 'workplace',
-            component: './Dashboard/Workplace',
-          },
-        ],
+        path: '/home',
+        name: 'home',
+        component: './Dashboard/Analysis',
       },
       // forms
       {
@@ -149,26 +132,6 @@ export default [
         ],
       },
       {
-        path: '/profile',
-        name: 'profile',
-        icon: 'profile',
-        routes: [
-          // profile
-          {
-            path: '/profile/basic',
-            name: 'basic',
-            component: './Profile/BasicProfile',
-          },
-          {
-            path: '/profile/advanced',
-            name: 'advanced',
-            authority: ['admin'],
-            component: './Profile/AdvancedProfile',
-          },
-        ],
-      },
-      {
-        name: 'exception',
         icon: 'warning',
         path: '/exception',
         routes: [
@@ -197,7 +160,6 @@ export default [
         ],
       },
       {
-        name: 'account',
         icon: 'user',
         path: '/account',
         routes: [
