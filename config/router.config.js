@@ -34,7 +34,7 @@ export default [
       {
         path: '/home',
         name: 'home',
-        component: './Dashboard/Analysis',
+        component: './Home',
       },
       // forms
       {
