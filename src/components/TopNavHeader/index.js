@@ -12,7 +12,7 @@ export default class TopNavHeader extends PureComponent {
 
   static getDerivedStateFromProps(props) {
     return {
-      maxWidth: (props.contentWidth === 'Fixed' ? 1200 : window.innerWidth) - 280 - 165 - 40,
+      maxWidth: (props.contentWidth === 'Fixed' ? 1200 : window.innerWidth) - 280 - 286 - 40,
     };
   }
 
@@ -31,8 +31,7 @@ export default class TopNavHeader extends PureComponent {
           <div className={styles.left}>
             <div className={styles.logo} key="logo" id="logo">
               <Link to="/">
-                <img src={logo} alt="logo" />
-                <h1>Ant Design Pro</h1>
+                <img style={{ height: '64px' }} src={logo} alt="logo" />
               </Link>
             </div>
             <div

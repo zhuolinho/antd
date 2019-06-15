@@ -1,6 +1,6 @@
 module.exports = {
   navTheme: 'light', // theme for nav menu
-  primaryColor: '#c81d48', // primary color of ant design
+  primaryColor: '#c5224b', // primary color of ant design
   layout: 'topmenu', // nav menu position: sidemenu or topmenu
   contentWidth: 'Fluid', // layout of content: Fluid or Fixed, only works when layout is topmenu
   fixedHeader: false, // sticky header
