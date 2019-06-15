@@ -132,6 +132,11 @@ export default [
         ],
       },
       {
+        path: '/about',
+        name: 'about',
+        component: './About',
+      },
+      {
         icon: 'warning',
         path: '/exception',
         routes: [
