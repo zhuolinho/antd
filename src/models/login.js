@@ -1,5 +1,5 @@
 import { routerRedux } from 'dva/router';
-import { stringify } from 'qs';
+// import { stringify } from 'qs';
 import { fakeAccountLogin, getFakeCaptcha } from '@/services/api';
 import { setAuthority } from '@/utils/authority';
 import { getPageQuery } from '@/utils/utils';
@@ -54,14 +54,6 @@ export default {
         },
       });
       reloadAuthorized();
-      yield put(
-        routerRedux.push({
-          pathname: '/user/login',
-          search: stringify({
-            redirect: window.location.href,
-          }),
-        })
-      );
     },
   },
 
