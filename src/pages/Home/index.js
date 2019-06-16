@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react';
 import mv from '@/assets/MV 720P .mp4';
+import homeImg from '@/assets/home.jpg';
 import { Card } from 'antd';
 // import classNames from 'classnames';
 import styles from './index.less';
@@ -7,8 +8,9 @@ import styles from './index.less';
 
 const Home = () => (
   <Fragment>
+    <img src={homeImg} style={{ width: '100%' }} alt="banner" />
     <Card style={{ textAlign: 'center', border: 'none' }}>
-      <video src={mv} controls>
+      <video src={mv} controls style={{ width: '80%' }}>
         <track kind="captions" />
       </video>
     </Card>

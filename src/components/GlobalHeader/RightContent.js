@@ -1,6 +1,7 @@
-import React, { PureComponent } from 'react';
+import React, { PureComponent, Fragment } from 'react';
 import { FormattedMessage } from 'umi/locale';
-import { Spin, Menu, Icon, Avatar } from 'antd';
+import { Button, Menu, Icon, Avatar } from 'antd';
+import router from 'umi/router';
 import HeaderDropdown from '../HeaderDropdown';
 import styles from './index.less';
 
@@ -23,6 +24,12 @@ export default class GlobalHeaderRight extends PureComponent {
     if (theme === 'dark') {
       className = `${styles.right}  ${styles.dark}`;
     }
+    const login = () => {
+      router.push('/user/login');
+    };
+    const register = () => {
+      router.push('/user/register');
+    };
     return (
       <div className={className}>
         {currentUser.name ? (
@@ -38,7 +45,14 @@ export default class GlobalHeaderRight extends PureComponent {
             </span>
           </HeaderDropdown>
         ) : (
-          <Spin size="small" style={{ marginLeft: 8, marginRight: 8 }} />
+          <Fragment>
+            <Button type="link" onClick={register}>
+              注册
+            </Button>
+            <Button type="link" onClick={login}>
+              登录
+            </Button>
+          </Fragment>
         )}
       </div>
     );

@@ -54,6 +54,10 @@ export default {
         },
       });
       reloadAuthorized();
+      yield put({
+        type: 'user/saveCurrentUser',
+        payload: {},
+      });
     },
   },
 

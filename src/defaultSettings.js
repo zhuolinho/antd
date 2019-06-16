@@ -6,5 +6,5 @@ module.exports = {
   fixedHeader: true, // sticky header
   autoHideHeader: true, // auto hide header
   fixSiderbar: false, // sticky siderbar
-  title: 'VR Platform',
+  title: '产品设计虚拟仿真与认知评价教学实验平台',
 };
