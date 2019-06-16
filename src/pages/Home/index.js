@@ -10,7 +10,8 @@ const Home = () => (
   <Fragment>
     <img src={homeImg} style={{ width: '100%' }} alt="banner" />
     <Card style={{ textAlign: 'center', border: 'none' }}>
-      <video src={mv} controls style={{ width: '80%' }}>
+      <video controls style={{ width: '80%' }}>
+        <source src={mv} />
         <track kind="captions" />
       </video>
     </Card>
