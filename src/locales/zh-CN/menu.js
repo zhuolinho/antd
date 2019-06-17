@@ -1,5 +1,6 @@
 export default {
   'menu.home': '首页',
+  'menu.lab': '实验室',
   'menu.about': '关于网站',
   'menu.form': '表单页',
   'menu.form.basicform': '基础表单',
