@@ -129,6 +129,13 @@ export default function request(url, option) {
       }
       return response.json();
     })
+    .then(result => {
+      if (result.msg === 'success') return result.result;
+      notification.error({
+        message: result.msg,
+      });
+      return null;
+    })
     .catch(e => {
       const status = e.name;
       if (status === 401) {
