@@ -26,9 +26,9 @@ const Lab = () => (
     <Card className={styles.context} title="实验项目特色">
       实验项目特色
     </Card>
-    <Card className={styles.context} title="网络要求">
+    <Card className={styles.context} title="设备介绍">
       <List
-        grid={{ column: 5 }}
+        grid={{ column: 4 }}
         dataSource={data}
         renderItem={item => (
           <List.Item style={{ textAlign: 'center' }}>

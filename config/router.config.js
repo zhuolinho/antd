@@ -35,7 +35,6 @@ export default [
         name: 'home',
         component: './Home',
       },
-      // forms
       {
         path: '/lab',
         name: 'lab',
@@ -88,6 +87,11 @@ export default [
             ],
           },
         ],
+      },
+      {
+        path: '/experiment',
+        name: 'experiment',
+        component: 'Experiment',
       },
       {
         path: '/about',
