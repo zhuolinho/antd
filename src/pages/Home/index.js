@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import mv from '@/assets/MV 720P .mp4';
 import homeImg from '@/assets/home.jpg';
 import { Card } from 'antd';
+import poster1 from '@/assets/poster1.jpg';
 // import classNames from 'classnames';
 import styles from './index.less';
 //   const clsString = classNames(styles.globalFooter, className);
@@ -10,7 +11,7 @@ const Home = () => (
   <Fragment>
     <img src={homeImg} style={{ width: '100%' }} alt="banner" />
     <Card style={{ textAlign: 'center', border: 'none' }}>
-      <video controls style={{ width: '80%' }}>
+      <video controls style={{ width: '80%' }} poster={poster1}>
         <source src={mv} />
         <track kind="captions" />
       </video>
