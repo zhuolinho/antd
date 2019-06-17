@@ -19,7 +19,7 @@ export default {
       if (response) {
         yield put({
           type: 'changeLoginStatus',
-          payload: { status: 'ok', currentAuthority: response.userInfo.role },
+          payload: { status: 'ok', currentAuthority: response.role, type: 'account' },
         });
         reloadAuthorized();
         const urlParams = new URL(window.location.href);

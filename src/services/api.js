@@ -126,7 +126,7 @@ export async function getFakeCaptcha(mobile) {
 }
 
 export async function userLogin(params) {
-  return request('/api/user/register', {
+  return request('/api/user/login', {
     method: 'POST',
     body: params,
   });
