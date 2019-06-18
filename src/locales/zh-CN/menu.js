@@ -1,6 +1,7 @@
 export default {
   'menu.home': '首页',
   'menu.lab': '实验室',
+  'menu.course': '实验课程',
   'menu.experiment': 'VR实验',
   'menu.about': '关于网站',
   'menu.form': '表单页',
