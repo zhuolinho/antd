@@ -1,5 +1,6 @@
 import React from 'react';
 import { Card, List } from 'antd';
+import router from 'umi/router';
 // import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 import styles from './index.less';
 import one from '@/assets/1111.png';
@@ -21,7 +22,11 @@ const About = () => (
         grid={{ column: 4 }}
         dataSource={data}
         renderItem={item => (
-          <List.Item>
+          <List.Item
+            onClick={() => {
+              router.push('/experiment/vr');
+            }}
+          >
             <img src={item.src} alt={item.name} style={{ height: '150px' }} />
             <p>{item.name}</p>
           </List.Item>

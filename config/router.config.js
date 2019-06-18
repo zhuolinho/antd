@@ -55,7 +55,14 @@ export default [
       {
         path: '/experiment',
         name: 'experiment',
-        component: 'Experiment',
+        routes: [
+          { path: '/experiment', redirect: '/experiment/list' },
+          { path: '/experiment/list', component: 'Experiment' },
+          {
+            path: '/experiment/vr',
+            component: './Experiment/VR',
+          },
+        ],
       },
       {
         path: '/about',
