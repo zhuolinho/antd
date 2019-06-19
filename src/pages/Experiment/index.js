@@ -1,38 +1,23 @@
 import React from 'react';
-import { Card, List } from 'antd';
-import router from 'umi/router';
+import { Card, Button } from 'antd';
+import { connect } from 'dva';
 // import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 import styles from './index.less';
-import one from '@/assets/1111.png';
-import two from '@/assets/2222.png';
-import three from '@/assets/3333.png';
-import four from '@/assets/4444.png';
 
-const data = [
-  { name: '步态分析实验', src: one },
-  { name: '眼动仪实验', src: two },
-  { name: '多导仪实验', src: three },
-  { name: '面部识别实验', src: four },
-];
-
-const About = () => (
+const Experiment = ({ primaryColor }) => (
   <Card>
     <Card className={styles.context} title="VR实验">
-      <List
-        grid={{ column: 4 }}
-        dataSource={data}
-        renderItem={item => (
-          <List.Item
-            onClick={() => {
-              router.push('/experiment/vr');
-            }}
-          >
-            <img src={item.src} alt={item.name} style={{ height: '150px' }} />
-            <p>{item.name}</p>
-          </List.Item>
-        )}
-      />
+      <Button
+        type="primary"
+        style={{ backgroundColor: primaryColor }}
+        onClick={() => {
+          window.location = '/vr/vr1';
+        }}
+      >
+        开始实验
+      </Button>
     </Card>
   </Card>
 );
-export default About;
+
+export default connect(({ setting }) => ({ primaryColor: setting.primaryColor }))(Experiment);

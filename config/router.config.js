@@ -48,21 +48,14 @@ export default [
           { path: '/course/list', component: 'Course' },
           {
             path: '/course/course1',
-            component: './List/TableList',
+            component: 'Course/Course1',
           },
         ],
       },
       {
         path: '/experiment',
         name: 'experiment',
-        routes: [
-          { path: '/experiment', redirect: '/experiment/list' },
-          { path: '/experiment/list', component: 'Experiment' },
-          {
-            path: '/experiment/vr',
-            component: './Experiment/VR',
-          },
-        ],
+        component: 'Experiment',
       },
       {
         path: '/about',
