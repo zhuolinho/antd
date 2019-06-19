@@ -4,6 +4,7 @@ export default {
   'menu.course': '实验课程',
   'menu.experiment': 'VR实验',
   'menu.about': '关于网站',
+  'menu.statistics': '网站统计',
   'menu.form': '表单页',
   'menu.form.basicform': '基础表单',
   'menu.form.stepform': '分步表单',
