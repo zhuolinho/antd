@@ -50,7 +50,7 @@ export default [
         path: '/statistics',
         name: 'statistics',
         authority: ['admin'],
-        component: 'Statistics',
+        component: 'Statistics/Analysis',
       },
       {
         icon: 'warning',
