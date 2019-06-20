@@ -13,15 +13,15 @@ const topColResponsiveProps = {
   style: { marginBottom: 24 },
 };
 
-const IntroduceRow = memo(({ loading }) => (
+const IntroduceRow = memo(({ loading, visitData }) => (
   <Row gutter={24}>
     <Col {...topColResponsiveProps}>
       <ChartCard
         bordered={false}
         title="注册人数"
         loading={loading}
-        total={numeral(126560).format('0,0')}
-        footer={<Field label="日注册人数" value={numeral(12423).format('0,0')} />}
+        total={numeral(visitData[0].y).format('0,0')}
+        footer={<Field label="日注册人数" value={numeral(visitData[1].y).format('0,0')} />}
         contentHeight={46}
       />
     </Col>
@@ -31,11 +31,11 @@ const IntroduceRow = memo(({ loading }) => (
         bordered={false}
         loading={loading}
         title={<FormattedMessage id="app.analysis.visits" defaultMessage="Visits" />}
-        total={numeral(88460).format('0,0')}
+        total={numeral(visitData[2].y).format('0,0')}
         footer={
           <Field
             label={<FormattedMessage id="app.analysis.day-visits" defaultMessage="Daily Visits" />}
-            value={numeral(1234).format('0,0')}
+            value={numeral(visitData[3].y).format('0,0')}
           />
         }
         contentHeight={46}
@@ -46,8 +46,8 @@ const IntroduceRow = memo(({ loading }) => (
         bordered={false}
         loading={loading}
         title="实验人数"
-        total={numeral(6560).format('0,0')}
-        footer={<Field label="日实验人数" value="320" />}
+        total={numeral(visitData[1].y).format('0,0')}
+        footer={<Field label="日实验人数" value={numeral(visitData[4].y).format('0,0')} />}
         contentHeight={46}
       />
     </Col>
