@@ -131,3 +131,7 @@ export async function userLogin(params) {
     body: params,
   });
 }
+
+export async function getData() {
+  return request(`/api/user/data`);
+}
