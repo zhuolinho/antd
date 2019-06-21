@@ -4,16 +4,8 @@ export default {
   namespace: 'chart',
 
   state: {
-    visitData: [],
-    visitData2: [],
+    visitData: {},
     salesData: [],
-    searchData: [],
-    offlineData: [],
-    offlineChartData: [],
-    salesTypeData: [],
-    salesTypeDataOnline: [],
-    salesTypeDataOffline: [],
-    radarData: [],
     loading: false,
   },
 
@@ -22,7 +14,7 @@ export default {
       const response = yield call(getData);
       yield put({
         type: 'save',
-        payload: response,
+        payload: { visitData: response },
       });
     },
     *fetchSalesData(_, { call, put }) {
@@ -48,16 +40,9 @@ export default {
     },
     clear() {
       return {
-        visitData: [],
-        visitData2: [],
+        visitData: {},
         salesData: [],
-        searchData: [],
-        offlineData: [],
-        offlineChartData: [],
-        salesTypeData: [],
-        salesTypeDataOnline: [],
-        salesTypeDataOffline: [],
-        radarData: [],
+        loading: false,
       };
     },
   },
