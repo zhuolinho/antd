@@ -11,7 +11,7 @@ import five from '@/assets/大疆 飞行眼镜.png';
 import six from '@/assets/大疆 晓spark 无人机.png';
 import seven from '@/assets/大疆osmo.png';
 import eight from '@/assets/精灵 Phantom 4 Pro.png';
-import nine from '@/assets/Baropodometric Platforms  .jpg';
+import nine from '@/assets/Baropodometric Platforms.jpg';
 import ten from '@/assets/Desktop-MakerBot-Replicator-Z18-Product-Image.png';
 import eleven from '@/assets/eego™mylab全移动脑电记录分析系统.jpg';
 import twelve from '@/assets/maxhub.jpg';
