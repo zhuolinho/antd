@@ -135,3 +135,10 @@ export async function userLogin(params) {
 export async function getData() {
   return request(`/api/user/data`);
 }
+
+export async function chartData(params) {
+  return request(`/api/user/chartData`, {
+    method: 'POST',
+    body: params,
+  });
+}

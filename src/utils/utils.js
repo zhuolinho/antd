@@ -23,6 +23,7 @@ export function getTimeDistance(type) {
     now.setHours(0);
     now.setMinutes(0);
     now.setSeconds(0);
+    now.setMilliseconds(0);
 
     if (day === 0) {
       day = 6;

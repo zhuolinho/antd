@@ -16,14 +16,19 @@ const SalesCard = React.lazy(() => import('./SalesCard'));
 }))
 class Analysis extends Component {
   state = {
-    rangePickerValue: getTimeDistance('year'),
+    rangePickerValue: getTimeDistance('week'),
   };
 
   componentDidMount() {
     const { dispatch } = this.props;
+    const { rangePickerValue } = this.state;
     this.reqRef = requestAnimationFrame(() => {
       dispatch({
         type: 'chart/fetch',
+      });
+      dispatch({
+        type: 'chart/fetchSalesData',
+        payload: rangePickerValue,
       });
     });
   }
@@ -45,17 +50,20 @@ class Analysis extends Component {
 
     dispatch({
       type: 'chart/fetchSalesData',
+      payload: rangePickerValue,
     });
   };
 
   selectDate = type => {
     const { dispatch } = this.props;
+    const rangePickerValue = getTimeDistance(type);
     this.setState({
-      rangePickerValue: getTimeDistance(type),
+      rangePickerValue,
     });
 
     dispatch({
       type: 'chart/fetchSalesData',
+      payload: rangePickerValue,
     });
   };
 
