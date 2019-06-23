@@ -1,7 +1,10 @@
 import React, { Fragment } from 'react';
 import mv from '@/assets/MV 720P .mp4';
-import homeImg from '@/assets/home.jpg';
-import { Card } from 'antd';
+import banner1 from '@/assets/banner1.jpg';
+import banner2 from '@/assets/banner2.jpg';
+import banner3 from '@/assets/banner3.jpg';
+import banner4 from '@/assets/banner4.jpg';
+import { Card, Carousel } from 'antd';
 import poster1 from '@/assets/poster1.jpg';
 // import classNames from 'classnames';
 import styles from './index.less';
@@ -9,7 +12,14 @@ import styles from './index.less';
 
 const Home = () => (
   <Fragment>
-    <img src={homeImg} style={{ width: '100%' }} alt="banner" />
+    <Card bordered={false}>
+      <Carousel autoplay>
+        <img src={banner1} alt="banner" />
+        <img src={banner2} alt="banner" />
+        <img src={banner3} alt="banner" />
+        <img src={banner4} alt="banner" />
+      </Carousel>
+    </Card>
     <Card style={{ textAlign: 'center', border: 'none' }}>
       <video controls style={{ width: '80%' }} poster={poster1}>
         <source src={mv} />
