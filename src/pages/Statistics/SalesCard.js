@@ -55,7 +55,7 @@ const SalesCard = memo(
                         defaultMessage="Sales Trend"
                       />
                     }
-                    data={salesData}
+                    data={salesData.vr}
                   />
                 </div>
               </Col>
@@ -76,7 +76,7 @@ const SalesCard = memo(
                         defaultMessage="Visits Trend"
                       />
                     }
-                    data={salesData}
+                    data={salesData.visit}
                   />
                 </div>
               </Col>

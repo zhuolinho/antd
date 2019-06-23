@@ -6,7 +6,6 @@ export default {
   state: {
     visitData: {},
     salesData: {},
-    loading: false,
   },
 
   effects: {
@@ -39,7 +38,6 @@ export default {
       return {
         visitData: {},
         salesData: {},
-        loading: false,
       };
     },
   },

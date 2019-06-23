@@ -1,5 +1,6 @@
 import React, { Component, Suspense } from 'react';
 import { connect } from 'dva';
+import moment from 'moment';
 
 import GridContent from '@/components/PageHeaderWrapper/GridContent';
 import { getTimeDistance } from '@/utils/utils';
@@ -87,6 +88,23 @@ class Analysis extends Component {
     const { loading, chart } = this.props;
     const { visitData, salesData } = chart;
 
+    const data = { visit: [], vr: [] };
+
+    for (let i = moment(rangePickerValue[0]); i < rangePickerValue[1]; i.add(1, 'd')) {
+      if (salesData.visit) {
+        data.visit.push({
+          x: i.format('MM-DD'),
+          y: salesData.visit[i.toJSON()] ? salesData.visit[i.toJSON()].count : 0,
+        });
+      }
+      if (salesData.vr) {
+        data.vr.push({
+          x: i.format('MM-DD'),
+          y: salesData.vr[i.toJSON()] ? salesData.vr[i.toJSON()].count : 0,
+        });
+      }
+    }
+
     return (
       <GridContent>
         <Suspense fallback={<PageLoading />}>
@@ -95,7 +113,7 @@ class Analysis extends Component {
         <Suspense fallback={null}>
           <SalesCard
             rangePickerValue={rangePickerValue}
-            salesData={salesData}
+            salesData={data}
             isActive={this.isActive}
             handleRangePickerChange={this.handleRangePickerChange}
             loading={loading}
