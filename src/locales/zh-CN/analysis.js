@@ -12,7 +12,7 @@ export default {
   'app.analysis.payments': '支付笔数',
   'app.analysis.conversion-rate': '转化率',
   'app.analysis.operational-effect': '运营活动效果',
-  'app.analysis.sales-trend': '销售趋势',
+  'app.analysis.sales-trend': '实验人数趋势',
   'app.analysis.sales-ranking': '门店销售额排名',
   'app.analysis.all-year': '全年',
   'app.analysis.all-month': '本月',
