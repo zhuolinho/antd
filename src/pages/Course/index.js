@@ -18,10 +18,10 @@ import seven from '@/assets/777.jpg';
 import eigth from '@/assets/888.jpg';
 
 const data1 = [
-  { name: '步态分析实验', src: one1 },
-  { name: '眼动仪实验', src: two1 },
-  { name: '多导仪实验', src: three1 },
-  { name: '面部识别实验', src: four1 },
+  { name: '步态分析实验', src: one1, router: '/course/course1' },
+  { name: '眼动仪实验', src: two1, router: '/course/course2' },
+  { name: '多导仪实验', src: three1, router: '/course/course3' },
+  { name: '面部识别实验', src: four1, router: '/course/course4' },
 ];
 
 const data = [
@@ -44,7 +44,7 @@ const About = () => (
         renderItem={item => (
           <List.Item
             onClick={() => {
-              router.push('/course/course1');
+              router.push(item.router);
             }}
           >
             <img src={item.src} alt={item.name} style={{ height: '150px' }} />

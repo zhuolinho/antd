@@ -1,5 +1,5 @@
 import React from 'react';
-import mv from '@/assets/ddy.mp4';
+import mv from '@/assets/btfx.mp4';
 // import homeImg from '@/assets/home.jpg';
 import { Card } from 'antd';
 import { connect } from 'dva';
@@ -9,14 +9,14 @@ import styles from './index.less';
 
 const Course = () => (
   <Card>
-    <Card className={styles.context} title="实验课程 > 多导仪实验">
+    <Card className={styles.context} title="实验课程 > 步态分析实验">
       <Card style={{ textAlign: 'center', border: 'none' }}>
         <video controls style={{ width: '80%' }}>
           <source src={mv} />
           <track kind="captions" />
         </video>
       </Card>
-      <Card title="多导仪实验" bordered={false}>
+      <Card title="步态分析实验" bordered={false}>
         <p>发布时间：2019年5月21日</p>
         <p>负责人：</p>
       </Card>

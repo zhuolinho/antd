@@ -34,6 +34,18 @@ export default [
             path: '/course/course1',
             component: 'Course/Course1',
           },
+          {
+            path: '/course/course2',
+            component: 'Course/Course2',
+          },
+          {
+            path: '/course/course3',
+            component: 'Course/Course3',
+          },
+          {
+            path: '/course/course4',
+            component: 'Course/Course4',
+          },
         ],
       },
       {
