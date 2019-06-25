@@ -22,7 +22,6 @@ const About = () => (
   <Card>
     <Card className={styles.context} title="关于我们">
       <img src={aboutImg} alt="about us" style={{ width: '100%' }} />
-      这里是关于我们的介绍
     </Card>
     <Card className={styles.context} title="网络要求">
       <List
@@ -37,8 +36,9 @@ const About = () => (
       />
     </Card>
     <Card className={styles.context} title="联系我们">
-      <p>电话：12300000000</p>
-      <p>邮箱：123@sjtu.edu.com</p>
+      <p>网站联系人：高老师</p>
+      <p>电话：021-54741917（转）807</p>
+      <p>邮箱：g.ryan@sjtu.edu.cn</p>
     </Card>
   </Card>
 );
