@@ -118,7 +118,7 @@ export default function request(url, option) {
       sessionStorage.removeItem(`${hashcode}:timestamp`);
     }
   }
-  return fetch(`http://localhost:3000${url}`, newOptions)
+  return fetch(`http://47.100.189.103:3000${url}`, newOptions)
     .then(checkStatus)
     .then(response => cachedSave(response, hashcode))
     .then(response => {

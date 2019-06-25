@@ -17,7 +17,7 @@ const Course = () => (
         </video>
       </Card>
       <Card title="步态分析实验" bordered={false}>
-        <p>发布时间：2019年5月21日</p>
+        <p>发布时间：2019年2月21日</p>
         <p>负责人：韩挺</p>
       </Card>
       <Card title="实验反馈" bordered={false} />
