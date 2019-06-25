@@ -1,6 +1,7 @@
 import React from 'react';
 import { Card, Button } from 'antd';
 import { connect } from 'dva';
+import request from '@/utils/request';
 // import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 import styles from './index.less';
 
@@ -11,7 +12,9 @@ const Experiment = ({ primaryColor }) => (
         type="primary"
         style={{ backgroundColor: primaryColor }}
         onClick={() => {
-          window.location = '/vr/vr1';
+          request('/api/vr').then(res => {
+            window.location = res.path;
+          });
         }}
       >
         开始实验

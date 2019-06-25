@@ -58,6 +58,7 @@ export default {
   },
   // 路由配置
   routes: pageRoutes,
+  history: 'hash',
   // Theme for antd
   // https://ant.design/docs/react/customize-theme-cn
   theme: {
@@ -66,13 +67,13 @@ export default {
   externals: {
     '@antv/data-set': 'DataSet',
   },
-  proxy: {
-    '/api/': {
-      target: 'http://localhost:3000/',
-      changeOrigin: true,
-      pathRewrite: { '^/server': '' },
-    },
-  },
+  // proxy: {
+  //   '/api/': {
+  //     target: 'http://localhost:3000/',
+  //     changeOrigin: true,
+  //     pathRewrite: { '^/server': '' },
+  //   },
+  // },
   ignoreMomentLocale: true,
   lessLoaderOptions: {
     javascriptEnabled: true,

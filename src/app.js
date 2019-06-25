@@ -1,4 +1,4 @@
-import fetch from 'dva/fetch';
+import request from '@/utils/request';
 
 export const dva = {
   config: {
@@ -29,7 +29,7 @@ export function patchRoutes(routes) {
 }
 
 export function render(oldRender) {
-  fetch('/api/user/visit')
+  request('/api/user/visit')
     .then(() =>
       Promise.resolve({
         '/form/advanced-form': { authority: ['admin', 'user'] },

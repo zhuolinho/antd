@@ -91,13 +91,13 @@ class Analysis extends Component {
     const data = { visit: [], vr: [] };
 
     for (let i = moment(rangePickerValue[0]); i < rangePickerValue[1]; i.add(1, 'd')) {
-      if (salesData.visit) {
+      if (salesData && salesData.visit) {
         data.visit.push({
           x: i.format('YYYY-MM-DD'),
           y: salesData.visit[i.toJSON()] ? salesData.visit[i.toJSON()].count : 0,
         });
       }
-      if (salesData.vr) {
+      if (salesData && salesData.vr) {
         data.vr.push({
           x: i.format('YYYY-MM-DD'),
           y: salesData.vr[i.toJSON()] ? salesData.vr[i.toJSON()].count : 0,
@@ -108,7 +108,7 @@ class Analysis extends Component {
     return (
       <GridContent>
         <Suspense fallback={<PageLoading />}>
-          <IntroduceRow loading={loading} visitData={visitData} />
+          <IntroduceRow loading={loading} visitData={visitData || {}} />
         </Suspense>
         <Suspense fallback={null}>
           <SalesCard
