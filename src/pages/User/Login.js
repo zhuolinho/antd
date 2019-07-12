@@ -94,6 +94,7 @@ class LoginPage extends Component {
             ]}
             onPressEnter={() => this.loginForm.validateFields(this.handleSubmit)}
           />
+          <div>专家入口：账号admin 密码123456</div>
           <Submit loading={submitting}>
             <FormattedMessage id="app.login.login" />
           </Submit>

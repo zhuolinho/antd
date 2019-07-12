@@ -1,5 +1,5 @@
 import React from 'react';
-import mv from '@/assets/MV 720P .mp4';
+import mv from '@/assets/产品设计虚拟仿真与认知评价教学实验引导720p.mp4';
 import { Card, List } from 'antd';
 import poster1 from '@/assets/poster2.jpg';
 import styles from './index.less';

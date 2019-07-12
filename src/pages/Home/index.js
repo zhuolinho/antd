@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import mv from '@/assets/MV 720P .mp4';
+import mv from '@/assets/虚拟仿真项目申报视频.mp4';
 import banner1 from '@/assets/banner1.jpg';
 import banner2 from '@/assets/banner2.jpg';
 import banner3 from '@/assets/banner3.jpg';
