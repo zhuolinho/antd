@@ -45,8 +45,10 @@ const Lab = () => (
         <track kind="captions" />
       </video>
     </Card>
-    <Card className={styles.context} title="实验项目特色">
-      实验项目特色
+    <Card className={styles.context}>
+      <p>
+        2018年，设计学院建成人因工学实验室，将成系统的人因工学研究结果应用于产品设计各个环节是课程的重要内容。实验室拥有成系统的教学实验设备，可将人的神经层面、神经与行为交互层面、行为层面、心理层面等因素科学地融入到产品设计中，在设计初始作为理论基础，结束时作为评估手段，大大提高设计效率、产品竞争性与教育科学性。创造出更加人性化、有价值的产品与服务。
+      </p>
     </Card>
     <Card className={styles.context} title="设备介绍">
       <List
@@ -61,9 +63,6 @@ const Lab = () => (
           </List.Item>
         )}
       />
-    </Card>
-    <Card className={styles.context} title="持续服务计划">
-      持续服务计划
     </Card>
   </Card>
 );
