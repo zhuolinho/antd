@@ -13,7 +13,12 @@ export default [
     path: '/',
     component: '../layouts/BasicLayout',
     routes: [
-      { path: '/', redirect: '/home' },
+      { path: '/', redirect: '/experiment' },
+      {
+        path: '/experiment',
+        name: 'experiment',
+        component: 'Experiment',
+      },
       {
         path: '/home',
         name: 'home',
@@ -47,11 +52,6 @@ export default [
             component: 'Course/Course4',
           },
         ],
-      },
-      {
-        path: '/experiment',
-        name: 'experiment',
-        component: 'Experiment',
       },
       {
         path: '/about',
