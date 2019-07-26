@@ -61,7 +61,7 @@ export default [
       {
         path: '/statistics',
         name: 'statistics',
-        authority: ['admin'],
+        // authority: ['admin'],
         component: 'Statistics/Analysis',
       },
       {
