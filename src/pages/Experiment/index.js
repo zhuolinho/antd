@@ -1,14 +1,26 @@
 import React from 'react';
-import { Card, Button } from 'antd';
+import { Card, Button, Carousel } from 'antd';
 import { connect } from 'dva';
 import request from '@/utils/request';
 import router from 'umi/router';
+import banner1 from '@/assets/b1.jpg';
+import banner2 from '@/assets/b2.jpg';
+import banner3 from '@/assets/b3.jpg';
+import banner4 from '@/assets/b4.jpg';
 // import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 import styles from './index.less';
 import { getAuthority } from '@/utils/authority';
 
 const Experiment = ({ primaryColor }) => (
   <Card>
+    <Card bordered={false}>
+      <Carousel autoplay dots={false}>
+        <img src={banner1} alt="banner" />
+        <img src={banner2} alt="banner" />
+        <img src={banner3} alt="banner" />
+        <img src={banner4} alt="banner" />
+      </Carousel>
+    </Card>
     <Card className={styles.context} title="实验目的">
       <p>
         本虚拟仿真实验教学项目，借助虚拟现实（Virtual Reality —
@@ -27,7 +39,7 @@ const Experiment = ({ primaryColor }) => (
       <p>（6）VR环境下三维虚拟对象的展示与运动设置的实施过程。</p>
       <p>（7）VR场景中用户对虚拟对象的交互操作及数据记录的实施过程。</p>
     </Card>
-    <Card className={styles.context}>
+    <Card className={styles.context} style={{ textAlign: 'center' }}>
       <Button
         type="primary"
         style={{ backgroundColor: primaryColor }}
