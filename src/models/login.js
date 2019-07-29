@@ -1,4 +1,4 @@
-import request from '@/utils/request';
+import router from 'umi/router';
 // import { stringify } from 'qs';
 import { userLogin, getFakeCaptcha } from '@/services/api';
 import { setAuthority } from '@/utils/authority';
@@ -21,9 +21,7 @@ export default {
           payload: { status: 'ok', currentAuthority: response.role, type: 'account' },
         });
         reloadAuthorized();
-        request('/api/vr').then(res => {
-          window.location = res.path;
-        });
+        router.push('/experiment/list');
       }
     },
 

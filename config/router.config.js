@@ -17,7 +17,11 @@ export default [
       {
         path: '/experiment',
         name: 'experiment',
-        component: 'Experiment',
+        routes: [
+          { path: '/experiment', redirect: '/experiment/index' },
+          { path: '/experiment/index', component: 'Experiment' },
+          { path: '/experiment/list', component: 'Experiment/List' },
+        ],
       },
       {
         path: '/home',

@@ -1,7 +1,6 @@
 import React from 'react';
 import { Card, Button, Carousel } from 'antd';
 import { connect } from 'dva';
-import request from '@/utils/request';
 import router from 'umi/router';
 import banner1 from '@/assets/b1.jpg';
 import banner2 from '@/assets/b2.jpg';
@@ -9,7 +8,6 @@ import banner3 from '@/assets/b3.jpg';
 import banner4 from '@/assets/b4.jpg';
 // import PageHeaderWrapper from '@/components/PageHeaderWrapper';
 import styles from './index.less';
-import { getAuthority } from '@/utils/authority';
 
 const Experiment = ({ primaryColor }) => (
   <Card>
@@ -44,13 +42,14 @@ const Experiment = ({ primaryColor }) => (
         type="primary"
         style={{ backgroundColor: primaryColor }}
         onClick={() => {
-          if (getAuthority().indexOf('guest') < 0) {
-            request('/api/vr').then(res => {
-              window.location = res.path;
-            });
-          } else {
-            router.push('/user/login');
-          }
+          // if (getAuthority().indexOf('guest') < 0) {
+          //   request('/api/vr').then(res => {
+          //     window.location = res.path;
+          //   });
+          // } else {
+          //   router.push('/user/login');
+          // }
+          router.push('/experiment/list');
         }}
       >
         开始实验
