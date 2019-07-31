@@ -42,7 +42,11 @@ const ExList = () => (
                     }
                   }}
                 >
-                  <img src={item.src} alt={item.name} style={{ height: '150px' }} />
+                  <img
+                    src={item.src}
+                    alt={item.name}
+                    style={{ height: '150px', cursor: 'pointer' }}
+                  />
                   <p>{item.name}</p>
                 </List.Item>
               )}
@@ -51,7 +55,7 @@ const ExList = () => (
         </Col>
         <Col span={12}>
           <Card title="实验学习" bordered={false}>
-            <img src={fake} alt="" style={{ width: '70%' }} />
+            <img src={fake} alt="" style={{ width: '70%', cursor: 'pointer' }} />
           </Card>
         </Col>
       </Row>

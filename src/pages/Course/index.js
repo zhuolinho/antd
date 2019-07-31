@@ -47,7 +47,7 @@ const About = () => (
               router.push(item.router);
             }}
           >
-            <img src={item.src} alt={item.name} style={{ height: '150px' }} />
+            <img src={item.src} alt={item.name} style={{ height: '150px', cursor: 'pointer' }} />
             <p>{item.name}</p>
           </List.Item>
         )}
