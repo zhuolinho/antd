@@ -5,7 +5,9 @@ import one1 from '@/assets/content-01.png';
 import two1 from '@/assets/content-02.png';
 import three1 from '@/assets/content-03.png';
 import four1 from '@/assets/content-04.png';
-import fake from '@/assets/fake.png';
+import button1 from '@/assets/button1.png';
+import button2 from '@/assets/button2.png';
+import button3 from '@/assets/button3.png';
 import { getAuthority } from '@/utils/authority';
 import request from '@/utils/request';
 import router from 'umi/router';
@@ -56,11 +58,27 @@ const ExList = () => (
         <Col span={12}>
           <Card title="实验学习" bordered={false}>
             <img
-              src={fake}
+              src={button1}
               alt=""
-              style={{ width: '70%', cursor: 'pointer' }}
+              style={{ width: '70%', cursor: 'pointer', margin: '15px' }}
               onClick={() => {
                 window.location = '//www.wenjuan.in/s/rUNfIbx/';
+              }}
+            />
+            <img
+              src={button2}
+              alt=""
+              style={{ width: '70%', cursor: 'pointer', margin: '15px' }}
+              onClick={() => {
+                router.push('/experiment/report');
+              }}
+            />
+            <img
+              src={button3}
+              alt=""
+              style={{ width: '70%', cursor: 'pointer', margin: '15px' }}
+              onClick={() => {
+                router.push('/experiment/score');
               }}
             />
           </Card>

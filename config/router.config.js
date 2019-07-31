@@ -21,6 +21,8 @@ export default [
           { path: '/experiment', redirect: '/experiment/index' },
           { path: '/experiment/index', component: 'Experiment' },
           { path: '/experiment/list', component: 'Experiment/List' },
+          { path: '/experiment/report', component: 'Experiment/Report' },
+          { path: '/experiment/score', component: 'Experiment/Score' },
         ],
       },
       {
