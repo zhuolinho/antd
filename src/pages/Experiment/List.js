@@ -55,7 +55,14 @@ const ExList = () => (
         </Col>
         <Col span={12}>
           <Card title="实验学习" bordered={false}>
-            <img src={fake} alt="" style={{ width: '70%', cursor: 'pointer' }} />
+            <img
+              src={fake}
+              alt=""
+              style={{ width: '70%', cursor: 'pointer' }}
+              onClick={() => {
+                window.location = '//www.wenjuan.in/s/rUNfIbx/';
+              }}
+            />
           </Card>
         </Col>
       </Row>
