@@ -14,10 +14,24 @@ const Report = () => (
     </Row>
     <Row style={{ margin: '40px 0' }}>
       <Col span={12}>
-        <img style={{ width: '80%' }} alt="" src={button2} />
+        <img
+          style={{ width: '80%' }}
+          alt=""
+          src={button2}
+          onClick={() => {
+            window.location = '//zhuolinho.gitee.io/moon-fight/产品造型语义评价报告.docx';
+          }}
+        />
       </Col>
       <Col span={12}>
-        <img style={{ width: '80%' }} alt="" src={button3} />
+        <img
+          style={{ width: '80%' }}
+          alt=""
+          src={button3}
+          onClick={() => {
+            window.location = '//zhuolinho.gitee.io/moon-fight/汽车模拟驾驶实验报告.docx';
+          }}
+        />
       </Col>
     </Row>
   </Card>
