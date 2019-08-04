@@ -13,14 +13,10 @@ import request from '@/utils/request';
 import router from 'umi/router';
 
 const data = [
-  { name: '汽车模拟驾驶实验', src: one1, router: '//zhuolinho.gitee.io/moon-fight/HMI1/' },
-  { name: '飞机模拟驾驶实验', src: two1, router: '//zhuolinho.gitee.io/moon-fight/webPlane/' },
-  {
-    name: '车身色彩认知实验',
-    src: three1,
-    router: '//zhuolinho.gitee.io/moon-fight/webVRCarTest/',
-  },
-  { name: '产品造型语义评价', src: four1, router: '//dschool.sjtu.edu.cn/home/research/vrtool/' },
+  { name: '汽车模拟驾驶实验', src: one1, router: '/experiment/HMI1' },
+  { name: '飞机模拟驾驶实验', src: two1, router: '/experiment/webPlane' },
+  { name: '车身色彩认知实验', src: three1, router: '/experiment/webVRCarTest' },
+  { name: '产品造型语义评价', src: four1, router: '/experiment/vrtool' },
 ];
 
 const ExList = () => (
@@ -37,7 +33,7 @@ const ExList = () => (
                   onClick={() => {
                     if (getAuthority().indexOf('guest') < 0) {
                       request('/api/vr').then(() => {
-                        window.location = item.router;
+                        router.push(item.router);
                       });
                     } else {
                       router.push('/user/login');

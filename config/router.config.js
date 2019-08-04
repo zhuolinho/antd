@@ -24,6 +24,10 @@ export default [
           { path: '/experiment/report', component: 'Experiment/Report' },
           { path: '/experiment/score', component: 'Experiment/Score' },
           { path: '/experiment/wenjuan', component: 'Experiment/Wenjuan' },
+          { path: '/experiment/HMI1', component: 'Experiment/HMI1' },
+          { path: '/experiment/webPlane', component: 'Experiment/WebPlane' },
+          { path: '/experiment/webVRCarTest', component: 'Experiment/WebVRCarTest' },
+          { path: '/experiment/vrtool', component: 'Experiment/VRtool' },
         ],
       },
       {
