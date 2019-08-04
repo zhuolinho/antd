@@ -61,7 +61,7 @@ const ExList = () => (
               alt=""
               style={{ width: '70%', cursor: 'pointer', margin: '15px' }}
               onClick={() => {
-                window.location = '//www.wenjuan.in/s/rUNfIbx/';
+                router.push('/experiment/wenjuan');
               }}
             />
             <img

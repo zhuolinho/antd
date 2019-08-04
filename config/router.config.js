@@ -23,6 +23,7 @@ export default [
           { path: '/experiment/list', component: 'Experiment/List' },
           { path: '/experiment/report', component: 'Experiment/Report' },
           { path: '/experiment/score', component: 'Experiment/Score' },
+          { path: '/experiment/wenjuan', component: 'Experiment/Wenjuan' },
         ],
       },
       {
