@@ -47,9 +47,8 @@ const ExList = () => (
                   <img
                     src={item.src}
                     alt={item.name}
-                    style={{ height: '150px', cursor: 'pointer' }}
+                    style={{ height: '200px', cursor: 'pointer' }}
                   />
-                  <p>{item.name}</p>
                 </List.Item>
               )}
             />
